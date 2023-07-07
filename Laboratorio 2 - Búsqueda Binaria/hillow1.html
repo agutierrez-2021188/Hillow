@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" media="all" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Hillow 1</title>
+</head>
+    <script>
+        nAleatorio = Math.floor(Math.random() * 1000 + 1);
+        intento = 1;      
+        function Busqueda() {
+                if (intento == 10) {
+                    alert("Lo siento, no lograste adivinar mi número :( mi número era: "+ nAleatorio);
+                    nAleatorio = Math.floor(Math.random() * 1000 + 1);
+                    intento = 1;
+                } else {
+                    if (num1.value > 0 && num1.value <= 1000) {
+                        if (num1.value == nAleatorio) {
+                            alert("¡¡ Felicidades, lograste adivinar mi numero en  " + intento + " intentos !!");
+                            nAleatorio = Math.floor(Math.random() * 1000 + 1);
+                            intento = 1;
+                        } else {
+                            if (nAleatorio < num1.value) {
+                                alert("El número es menor al que ingreso, le quedan : " + (10 - intento) + " intentos");
+                                intento++;
+                            } else {
+                                alert("El número es mayor al  que ingreso, le quedan : " + (10 - intento) + " intentos ");
+                                intento++;
+                            }
+                        }
+                    } else {
+                        alert("Por favor, ingrese un número entre 1 y 1000");
+                    }
+                }
+
+            }
+    </script>
+<body>
+    <center>
+    <br></br>
+    <h1> >> Hillow 1 << </h1>
+    <label>Encuentra mi número que esta en un rango de 0 a 1000, tienes 10 intentos..... Suerte !!! </label>
+    <br></br>
+    <input class="lol" type="text" id="num1"> 
+    <br></br>
+    <input class="bot" type="button" value=" ¿Es esté el numero? " onclick="Busqueda()" class="boton">
+    </center>
+</body>
+</html>

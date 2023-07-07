@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all" href="style.css" />
+    <title>Hillow 2</title>
+
+</head>
+<script>    
+        let limiteInferior = 0;
+        let limiteSuperior = 1000;
+        let intento = 1;
+    
+    function nuevoLimiteSup(){
+        alert("El numero es menor, intento "+intento);
+        limiteSuperior = Math.floor((limiteInferior + limiteSuperior)/2);
+        document.getElementById("Numero").value=Math.floor((limiteInferior + limiteSuperior)/2);
+        intento++;
+        if(intento == 11){
+        alert("Lo siento no se ha podido adivinar tu numero :(( en los ");
+        location.reload();
+        }
+    }    
+
+    function cambiarLimiteInf(){
+        alert("El numero es mayor, intento "+intento);
+        limiteInferior = Math.floor((limiteSuperior + limiteInferior)/2);
+        document.getElementById("Numero").value=Math.floor((limiteSuperior + limiteInferior)/2);
+        intento++;
+        if(intento == 11){
+        alert("Lo siento no se ha podido adivinar tu numero :(( en los ");
+        location.reload();
+        }
+    }
+
+        function encontrado(){
+            alert(">> Numero encontrado << - en "+ intento+" intentos");
+            location.reload();
+            intento++; 
+        }
+</script>
+<body>
+    <center>
+        <h1>Piensa un número que esta en un rango de 0 a 1000 y lo adivinaré en 10 intentos máximo</h1>
+        <br><br>        
+        <label>¿Es este el número?</label>
+        <br>
+        <input class="lol" type="text" id="Numero" value="500" disabled="true"  >
+        <br><br>
+        <button class="bot" onclick="nuevoLimiteSup()">El número es Menor</button>
+        <button class="bot" onclick="encontrado()">Ese es mi número</button>
+        <button class="bot" onclick="cambiarLimiteInf()">El número es Mayor</button> 
+    </center>
+</body>
+</html>

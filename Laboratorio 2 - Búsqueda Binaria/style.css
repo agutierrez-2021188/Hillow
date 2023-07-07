@@ -1,0 +1,83 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5);
+	background-size: 600% 600%;
+	background-repeat: no-repeat;
+    background-attachment: fixed; /*La imagen no desaparezca luego de bajar con mouse*/
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/*Para arriba es del fondo con animacion*/
+
+nav a{
+	
+    text-decoration:none;
+    color:inherit;
+    font-size:14px;
+    } 
+    nav li{
+    display:inline-block;
+    width:15%;
+    padding:10px 10px;
+	border-radius: 20px 20px 20px 20px;
+    background-color:rgba(0, 89, 255, 0.486);
+    border:2px solid #fff;
+    text-align:center;
+    color:#fff;
+    }
+    nav li:hover{
+    background-color:#fff;
+    color:#000;
+}
+
+h1{
+	font-family: cursive;
+	font-size: 500%;
+}
+
+.lol{
+    font-size: 20px;
+    background-color: #94c8e0; 
+    border-radius: 12px;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.bot{
+    background-color: rgb(107, 76, 219); 
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
